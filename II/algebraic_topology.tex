@@ -110,7 +110,7 @@ Throughout this course, ``maps'' mean continuous maps.
 \end{definition}
 
 \begin{eg}
-  Let \(X = S^1, Y = \R^2 - \{0\}\). Let \(f: X \to Y\) be the natural inclusion nad \(g: Y \to X, x \mapsto \frac{x}{\norm x}\). Then
+  Let \(X = S^1, Y = \R^2 - \{0\}\). Let \(f: X \to Y\) be the natural inclusion and \(g: Y \to X, x \mapsto \frac{x}{\norm x}\). Then
   \begin{align*}
     g \compose f &= \id_X \\
     f \compose g(x) &= \frac{x}{\norm x} \in \R^2
@@ -362,7 +362,7 @@ i.e.\ \(g_* = \alpha_\# \compose f_*\).
 \begin{definition}[covering space]\index{covering space}
   Let \(p: \hat X \to X\) be a map. An open set \(U \subseteq X\) is \emph{evenly covered} if there is a discrete space \(\Delta_U\) and an identification \(p^{-1}(U) = \Delta_U \times U\) such that on \(p^{-1}(U)\), \(p\) coincides with projection to the second factor.
 
-  If every \(x \in X\) has an everly covered neighbourhood, we say that \(p\) is a \emph{covering map} and \(\hat X\) is a \emph{covering space}
+  If every \(x \in X\) has an evenly covered neighbourhood, we say that \(p\) is a \emph{covering map} and \(\hat X\) is a \emph{covering space}
 \end{definition}
 
 Alternatively, write \(U_\delta = \{\delta\} \times U\). Then \(p^{-1}(U) = \coprod_{\delta \in \Delta_U} U_\delta\). Write \(p|_\delta = p|_{U_\delta}\) which is a homeomorphism.
@@ -439,7 +439,7 @@ Let \(p: \hat X \to X\) be a covering map throughout the section.
 \end{lemma}
 
 \begin{proof}
-  Uniqueness follows from the more general uniquenss of lift so suffices to show existence. Consider
+  Uniqueness follows from the more general uniqueness of lift so suffices to show existence. Consider
   \[
     S = \{t \in I: \text{ lift of } \gamma|_{[0, t]} \text{ at } \hat x_0 \text{ exists}\},
   \]
@@ -483,7 +483,7 @@ Let \(p: \hat X \to X\) be a covering map throughout the section.
   \[
     (y_0, t) \in V_t \times J_t \subseteq F^{-1}(U_t).
   \]
-  Compactnss of \(I\) implies that \(\{y_0\} \times I\) is covered by \(V_1 \times J_1, \dots, V_n \times J_n\) where \(t_i \in J_i\). Setting \(V = \bigcap_{i = 1}^n V_i\) (and passing to a path-connected subset), we have \(\{y_0\} \times I\) covered by \(V \times J_1, \dots, V \times J_n\). Now define \(\tilde F\) on \(V \times I\) by
+  Compactness of \(I\) implies that \(\{y_0\} \times I\) is covered by \(V_1 \times J_1, \dots, V_n \times J_n\) where \(t_i \in J_i\). Setting \(V = \bigcap_{i = 1}^n V_i\) (and passing to a path-connected subset), we have \(\{y_0\} \times I\) covered by \(V \times J_1, \dots, V \times J_n\). Now define \(\tilde F\) on \(V \times I\) by
   \[
     \tilde F(y, t) = p_{\delta_i}^{-1} \compose F(y, t)
   \]
@@ -540,7 +540,7 @@ Given \(G\) action on \(X\), orbit-stabiliser says that there is a bijection bet
 \end{lemma}
 
 \begin{proof}
-  Suffices to show that the action is transitive and the stabiliser of \(\hat x\) is \(p_* \pi_1(\hat X, \hat x)\). As \(\hat X\) is path-connected there exists a path \(\hat \gamma\) between any two points in \(p^{-1}(x)\), whose image \(\gamma\) under \(p\) is a loop bases at \(x\), and is the only loop whose lift is \(\hat \gamma\) by uniquenss. The stabiliser of \(\hat x\) are precisely the homotopy classes of loops based at \(x\) whose lifts are loops baesd at \(\hat x\), which is precisely \(p_* \pi_1(\hat X, \hat x)\).
+  Suffices to show that the action is transitive and the stabiliser of \(\hat x\) is \(p_* \pi_1(\hat X, \hat x)\). As \(\hat X\) is path-connected there exists a path \(\hat \gamma\) between any two points in \(p^{-1}(x)\), whose image \(\gamma\) under \(p\) is a loop bases at \(x\), and is the only loop whose lift is \(\hat \gamma\) by uniqueness. The stabiliser of \(\hat x\) are precisely the homotopy classes of loops based at \(x\) whose lifts are loops based at \(\hat x\), which is precisely \(p_* \pi_1(\hat X, \hat x)\).
 \end{proof}
 
 \begin{definition}[universal cover]\index{universal cover}
@@ -674,7 +674,7 @@ The map is not only bijective, but also equivariantly so. Thus by looking into t
 \end{proof}
 
 \begin{eg}
-  Let \(X = S^1\), we have path-connteced covering space \(p: \R \to S^1, t \mapsto e^{2\pi it}\) and \(p_n: S^1 \to S^1, z \mapsto z^n\). The subgroups of \(\Z\) are precisely \(n\Z\). It is easy to see that \(p\) corresponds to \(0\) and \(p_n\) correponds to \(n\Z\). Galois correspondence then tells us that these are all the path-connected covering space of \(S^1\) up to isomorphism.
+  Let \(X = S^1\), we have path-connected covering space \(p: \R \to S^1, t \mapsto e^{2\pi it}\) and \(p_n: S^1 \to S^1, z \mapsto z^n\). The subgroups of \(\Z\) are precisely \(n\Z\). It is easy to see that \(p\) corresponds to \(0\) and \(p_n\) corresponds to \(n\Z\). Galois correspondence then tells us that these are all the path-connected covering space of \(S^1\) up to isomorphism.
 \end{eg}
 
 \begin{corollary}
@@ -719,7 +719,7 @@ The map is not only bijective, but also equivariantly so. Thus by looking into t
 \end{corollary}
 
 \begin{proof}
-  Both \((\tilde X, \tilde x_0)\) and \((\tilde X, \tilde x)\) correspond ot the trivial subgroup of \(\pi_1(X, x_0)\) so the result follows from 2.27.
+  Both \((\tilde X, \tilde x_0)\) and \((\tilde X, \tilde x)\) correspond to the trivial subgroup of \(\pi_1(X, x_0)\) so the result follows from 2.27.
 \end{proof}
 
 Now we have two different correspondences:
@@ -743,7 +743,7 @@ We have seen groups described in the following form in IA Groups:
 \[
   D_{2n} = \langle r, s | s^2 = r^n = e, srs = r^{-1} \rangle
 \]
-where we impose \emph{relations} on the right on the group generated by the \emph{generators} on the left. This is an example of a \emph{presentation}. What should be the group generated by the generators be? Should it, for example, have an elemnet of order 2? Morally, the answer should be ``no'' as we should move all relations to the right. This leaves us with a free group, which is a group with no relation. Given a set \(A\) of generators, called an \emph{alphabet}, \(FA\) is the free group generated by \(A\). Thus a free group has presentation
+where we impose \emph{relations} on the right on the group generated by the \emph{generators} on the left. This is an example of a \emph{presentation}. What should be the group generated by the generators be? Should it, for example, have an element of order 2? Morally, the answer should be ``no'' as we should move all relations to the right. This leaves us with a free group, which is a group with no relation. Given a set \(A\) of generators, called an \emph{alphabet}, \(FA\) is the free group generated by \(A\). Thus a free group has presentation
 \[
   FA = \langle a \in A \rangle.
 \]
@@ -908,7 +908,7 @@ Usually \(X\) and \(Y\) are path-connected so we can define wedges \(X \w Y\) wi
   \[
     \phi(\gamma') = f_1(\alpha_1')f_2(\beta_1') \cdots f_1(\alpha_m') f_2(\beta_m'),
   \]
-  we need to prove that \(\phi(\gamma) = \phi(\gamma')\). The key idea is to ``straighten'' \(F\) so that it is ``transverse'' to \(x_0\): this means that \(F^{-1}(x_0) \subseteq I \times I\) consists of a finite union of circles and intervales embedded in \(I \times I\). If there is a cirlce \(S! \subseteq F^{-1}(0)\) then we can ``cut it out'' and remove it. An arc with both endpoints on \(\gamma\) exhibit a subarc \(\delta \subseteq \Gamma\) such that \(\delta \simeq c_{x_0}\) in \(Y_1\) or \(Y_2\), reducing \(n\) without changing \(\phi(\gamma)\). After finitely many of these moves, we are left with a picture of the following form (drawing). Therefore \(m = n\) and \(\alpha_i \simeq \alpha_i', \beta_i \cong \beta_i'\) as paths so \(\phi(\gamma) = \phi(\gamma')\) as required.
+  we need to prove that \(\phi(\gamma) = \phi(\gamma')\). The key idea is to ``straighten'' \(F\) so that it is ``transverse'' to \(x_0\): this means that \(F^{-1}(x_0) \subseteq I \times I\) consists of a finite union of circles and intervals embedded in \(I \times I\). If there is a circle \(S! \subseteq F^{-1}(0)\) then we can ``cut it out'' and remove it. An arc with both endpoints on \(\gamma\) exhibit a subarc \(\delta \subseteq \Gamma\) such that \(\delta \simeq c_{x_0}\) in \(Y_1\) or \(Y_2\), reducing \(n\) without changing \(\phi(\gamma)\). After finitely many of these moves, we are left with a picture of the following form (drawing). Therefore \(m = n\) and \(\alpha_i \simeq \alpha_i', \beta_i \cong \beta_i'\) as paths so \(\phi(\gamma) = \phi(\gamma')\) as required.
 \end{proof}
 
 \begin{eg}
@@ -958,7 +958,7 @@ Usually \(X\) and \(Y\) are path-connected so we can define wedges \(X \w Y\) wi
 \end{eg}
 
 \begin{definition}[neighbourhood deformation retract]\index{neighbourhood deformation retract}
-  A subset \(Y \subseteq X\) is called a \emph{neighbourhood deformation retract} if there exists \(Y \subseteq V \subseteq X\) where \(V\) is open in \(X\) such that \(Y\) is a deformation rectraction of \(V\).
+  A subset \(Y \subseteq X\) is called a \emph{neighbourhood deformation retract} if there exists \(Y \subseteq V \subseteq X\) where \(V\) is open in \(X\) such that \(Y\) is a deformation retraction of \(V\).
 \end{definition}
 
 \begin{corollary}
@@ -1057,7 +1057,7 @@ In fact, we don't have to restrict our attention to finitely generated or finite
       &\cong \dots \\
       &\cong (\dots (F(A)/ \langle \langle r_1 \rangle\rangle) \dots ) / \langle\langle r_n \rangle\rangle,
   \end{align*}
-  one way to check this is to show they satisfy the same universal property. Now induciton on \(n\), with the base case \(n = 1\) being the wedge of \(|A|\) circles.
+  one way to check this is to show they satisfy the same universal property. Now induction on \(n\), with the base case \(n = 1\) being the wedge of \(|A|\) circles.
 \end{proof}
 
 \subsection{Classification of surfaces}
@@ -1083,7 +1083,7 @@ In fact, we don't have to restrict our attention to finitely generated or finite
   \[
     \Sigma_g = \Gamma_{2g} \cup_{\rho_g} D^2.
   \]
-  Claim \(\Sigma_g\) is a surface. There are three cases to consider. If a point in the interior of \(D^2\) then it has a neighbourhood homeomorphic to an open disk. If a point is in the interior of image of a path the ``two parts'' glue together to form an open disk. Similary all the edges are identified together.
+  Claim \(\Sigma_g\) is a surface. There are three cases to consider. If a point in the interior of \(D^2\) then it has a neighbourhood homeomorphic to an open disk. If a point is in the interior of image of a path the ``two parts'' glue together to form an open disk. Similarly all the edges are identified together.
 
   \(\Sigma_0\) is just \(S^2\). \(\Sigma_1\) is the square with two sides identified to a torus. In general \(\Sigma_g\) is called the (orientable surface) with genus \(g\).
 \end{eg}
@@ -1194,7 +1194,7 @@ Note that if \(\sigma\) is a \(0\)-simplex then \(\interior \sigma = \sigma\).
 \begin{eg}\leavevmode
   \begin{enumerate}
   \item In \(\R^{n + 1}\), the standard basis \(\{e_0, \dots e_n\}\) is in general position. The simplex it spans \(\sigma_n = \langle e_0, \dots, e_n\rangle\) is called the \emph{standard \(n\)-simplex}.
-  \item The \emph{standard (simplicial) \((n - 1)\)-sphere} is \(\b \sigma_n\). 
+  \item The \emph{standard (simplicial) \((n - 1)\)-sphere} is \(\b \sigma_n\).
   \end{enumerate}
 \end{eg}
 
@@ -1232,7 +1232,7 @@ Note that if \(\tau \leq \sigma\) then \(f_\tau = f_\sigma|_\tau\), so \(|f|\) i
 
 \subsection{Barycentric subdivision}
 
-Realisaition of simplicial maps are piecewise linear and thus very rigid. On the other hand, the realisations of simplicial complexes, as topological spaces, are ``deformable''. Is every continuous map \(|K| \to |L|\) homotopic to a realisation of a simplicial map? For example for \(K = L = \b \sigma_2\), there are infinitely many homotopy classes of continuous maps, which are in bijection with \(\pi_1(S^1)\). On the other hand there are only finitely many simplicial map \(K \to L\), and thus at most that many realisations. To establish the correspondence, we need subdivision.
+Realisation of simplicial maps are piecewise linear and thus very rigid. On the other hand, the realisations of simplicial complexes, as topological spaces, are ``deformable''. Is every continuous map \(|K| \to |L|\) homotopic to a realisation of a simplicial map? For example for \(K = L = \b \sigma_2\), there are infinitely many homotopy classes of continuous maps, which are in bijection with \(\pi_1(S^1)\). On the other hand there are only finitely many simplicial map \(K \to L\), and thus at most that many realisations. To establish the correspondence, we need subdivision.
 
 \begin{definition}[barycentre]\index{barycentre}
   If \(\sigma = \langle v_0, \dots, v_n \rangle\), the \emph{barycentre} of \(\sigma\) is
@@ -1263,7 +1263,7 @@ Realisaition of simplicial maps are piecewise linear and thus very rigid. On the
 \end{definition}
 
 \begin{definition}[mesh]\index{mesh}
-  Let \(K\) be a simplicial complex. define the \emph{mesh} of \(K\) to be
+  Let \(K\) be a simplicial complex. Define the \emph{mesh} of \(K\) to be
   \[
     \mesh(K) = \max_{\langle v_0, v_1 \rangle \in K} \norm{v_0 - v_1}_2.
   \]
@@ -1330,7 +1330,7 @@ Here the \(2\)-norm is just taken for the sake of convenience and concreteness.
 \end{proof}
 
 \begin{theorem}[simplicial approximation theorem]\index{simplicial approximation theorem}
-  Let \(K, L\) be simplicial complexes and \(\phi: |K| \to |L|\) a continuous map. For some \(r \in \N\) there is a implicial approximation to \(\phi\), \(f: K^{(r)} \to L\).
+  Let \(K, L\) be simplicial complexes and \(\phi: |K| \to |L|\) a continuous map. For some \(r \in \N\) there is a simplicial approximation to \(\phi\), \(f: K^{(r)} \to L\).
 \end{theorem}
 
 \begin{proof}
@@ -1370,7 +1370,7 @@ The analogue in simplices of a path is a \emph{chain}, which is a formal sum of 
 \end{eg}
 
 \begin{eg}
-  Let \(V = \{v_0, v_1, v_2\}\). There are two orientations, for exmaple \(\langle v_0, v_1, v_2 \rangle\) and \(\langle v_2, v_1, v_0 \rangle\) are two representatives.
+  Let \(V = \{v_0, v_1, v_2\}\). There are two orientations, for example \(\langle v_0, v_1, v_2 \rangle\) and \(\langle v_2, v_1, v_0 \rangle\) are two representatives.
 \end{eg}
 
 \begin{definition}[chain]\index{chain}
@@ -1416,7 +1416,7 @@ Note this is well-defined.
     Z_n(K) = \ker \b_n \leq C_n(K)
   \]
   is the group of \emph{\(n\)-cycles}.
-  
+
   The group
   \[
     B_n(K) = \im \b_{n + 1} \leq C_n(K)
