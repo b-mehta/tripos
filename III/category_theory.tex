@@ -53,7 +53,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
   \item a collection \(\ob \c C\) of \emph{objects} \(A, B, C, \dots\),
   \item a collection \(\mor \c C\) of \emph{morphisms} \(f, g, h, \dots\),
   \item two operations \(\dom\) and \(\cod\) assigning to each \(f \in \mor \c C\) a pair of objects, its \emph{domain} and \emph{codomain}. We write \(A \xrightarrow{f} B\) to mean \(f\) is a morphism and \(\dom f = A, \cod f = B\),
-  \item an operation assigning to each \(A \in \ob \c C\) a morhpism \(A \xrightarrow{1_A} A\),
+  \item an operation assigning to each \(A \in \ob \c C\) a morphism \(A \xrightarrow{1_A} A\),
   \item a partial binary operation \((f, g) \mapsto fg\) on morphisms, such that \(fg\) is defined if and only if \(\dom f = \cod g\) and let \(\dom fg = \dom g, \cod fg = \cod f\) if \(fg\) is defined
   \end{enumerate}
   satisfying
@@ -65,7 +65,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
 
 \begin{remark}\leavevmode
   \begin{enumerate}
-  \item This definition is independent of any model of set theory. If we're given a particuar model of set theory, we call \(\c C\) \emph{small}\index{category!small} if \(\ob \c C\) and \(\mor \c C\) are sets.
+  \item This definition is independent of any model of set theory. If we're given a particular model of set theory, we call \(\c C\) \emph{small}\index{category!small} if \(\ob \c C\) and \(\mor \c C\) are sets.
   \item Some texts say \(fg\) means \(f\) followed by \(g\) (we are not).
   \item Note that a morphism \(f\) is an identity if and only if \(fg = g\) and \(hf = h\) whenever the compositions are defined so we could formulate the definitions entirely in terms of morphisms.
   \end{enumerate}
@@ -76,7 +76,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
   \item The category \(\Set\) has all sets as objects and all functions between sets as morphisms (strictly, morphisms \(A \to B\) are pairs \((f, B)\) where \(f\) is a set theoretic function).
   \item The category \(\c{Gp}\) where objects are groups, morphisms are group homomorphisms. Similarly \(\c{Ring}\) is the category of rings and \(\c{Mod}_R\) is the category of \(R\)-modules.
   \item The category \(\Top\) has all topological spaces as objects and continuous functions as morphisms. Similarly \(\c{Unif}\) the category of uniform spaces with uniformly continuous functions and \(\c{Mf}\) the category of manifolds with smooth maps.
-  \item The cateogry \(\c{Htpy}\) has same objects as \(\Top\) but morphisms are homotopy classes of continuous functions.
+  \item The category \(\c{Htpy}\) has same objects as \(\Top\) but morphisms are homotopy classes of continuous functions.
 
     More generally, given \(\c C\) we call an equivalence relation \(\simeq\) on \(\mor \c C\) a \emph{congruence}\index{congruence} if \(f \simeq g\) implies \(\dom f = \dom g, \cod f = \cod g\) and \(fh \simeq gh\) and vice versa.
     Then we have a set \(\c C / \simeq\) with the same objects as \(\c C\) but congruence classes as morphisms.
@@ -132,7 +132,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
       P^*f(B') = \{a \in A: f(a) \in B'\}
     \]
     for \(B' \subseteq B\).
-  \item By a \emph{contravariant functor}\index{functor!contravariant} \(\c C \to \c D\) we mean a functor \(\c C \to \c D^{\text{op}}\) (or \(\c C^{\text{op}} \to \c D\). (A \emph{covariant functor} is one that doesn't reverse arrows)
+  \item By a \emph{contravariant functor}\index{functor!contravariant} \(\c C \to \c D\) we mean a functor \(\c C \to \c D^{\text{op}}\) (or \(\c C^{\text{op}} \to \c D\)). (A \emph{covariant functor} is one that doesn't reverse arrows)
 
     Let \(K\) be a field. We have a functor \(\cdot^*: \c{Mod}_K \to \c{Mod}^{\text{op}}_K\) defined by
     \[
@@ -142,8 +142,8 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
   \item We have a functor \(\cdot^\text{op}: \c{Cat} \to \c{Cat}\) which is the identity on morphisms. (note that this is \emph{covariant})
   \item A functor between monoids is a monoid homomorphism.
   \item A functor between posets is an order-preserving map.
-  \item Let \(G\) be a group. A functor \(F: G \to \Set\) consists of a ast \(A = F*\) together with an action of \(G\) on \(A\), i.e.\ permutation representation of \(G\). Similarly a functor \(G \to \c{Mod}_K\) is a \(K\)-linear representation of \(G\).
-  \item The construction of the fundamental gropu \(\pi_1(X, x)\) of a space \(X\) with basepoint \(x\) is a functor
+  \item Let \(G\) be a group. A functor \(F: G \to \Set\) consists of a set \(A = F*\) together with an action of \(G\) on \(A\), i.e.\ permutation representation of \(G\). Similarly a functor \(G \to \c{Mod}_K\) is a \(K\)-linear representation of \(G\).
+  \item The construction of the fundamental group \(\pi_1(X, x)\) of a space \(X\) with basepoint \(x\) is a functor
     \[
       \Top_* \to \c{Gp}
     \]
@@ -181,7 +181,7 @@ mysymbol/.style={start anchor=center,end anchor=center,draw=none}
     \]
   \item For any set \(A\), we have a mapping \(\sigma_A: A \to PA\) sending \(a\) to \(\{a\}\). If \(f: A \to B\) then \(Pf(\{a\}) = \{f(a)\}\). So \(\sigma\) is a natural transformation \(1_\Set \to P\).
   \item Let \(F: \Set \to \c{Gp}\) be the free group functor and \(U: \c{Gp} \to \Set\) the forgetful functor. The inclusions \(A \to UFA\) is a natural transformation \(1_\Set \to UF\).
-  \item Let \(G, H\) be groups and \(f, g: G \to H\) be two homomorphisms. Then a natural tranformation \(\alpha: f \to g\) corresponds to an element \(h = \alpha_*\) such that \(h f(x) = g(x) h\) for all \(x \in G\), or equivalently \(f(x) = h^{-1} g(x) h\), i.e.\ \(f\) and \(g\) are conjugate group homomorphisms.
+  \item Let \(G, H\) be groups and \(f, g: G \to H\) be two homomorphisms. Then a natural transformation \(\alpha: f \to g\) corresponds to an element \(h = \alpha_*\) such that \(h f(x) = g(x) h\) for all \(x \in G\), or equivalently \(f(x) = h^{-1} g(x) h\), i.e.\ \(f\) and \(g\) are conjugate group homomorphisms.
   \item Let \(A\) and \(B\) be two \(G\)-sets, regarded as functors \(G \to \Set\). A natural transformation \(A \to B\) is a function \(f\) satisfying \(f(g . a) = g. f(a)\) for all \(a \in A\), i.e.\ a \(G\)-equivariant map.
   \end{enumerate}
 \end{eg}
@@ -217,7 +217,7 @@ In study of algebraic theories (for example), we are interested in isomorphisms 
   We say a property \(P\) of categories is a \emph{category propery} if whenever \(\c C\) has \(P\) and \(\c C \simeq \c D\) then \(\c D\) has \(P\).
 \end{definition}
 
-For example, being a groupoid or a preorder are categorical properies, but being a group or a partial order are not.
+For example, being a groupoid or a preorder are categorical properties, but being a group or a partial order are not.
 
 \begin{eg}\leavevmode
   \begin{enumerate}
@@ -256,7 +256,7 @@ For example, being a groupoid or a preorder are categorical properies, but being
   \end{enumerate}
 \end{eg}
 
-Example 3 illustrates a general principle: when constructing a pair of functors between equivalent categories, ususally one is ``canonical'' and the other requires some choice, and a clever choice results in a particularly simple form for one way of composition. The next theorem abstracts away the ``choice'' and tells us when a functor is part of an equivalence purely by its properties.
+Example 3 illustrates a general principle: when constructing a pair of functors between equivalent categories, usually one is ``canonical'' and the other requires some choice, and a clever choice results in a particularly simple form for one way of composition. The next theorem abstracts away the ``choice'' and tells us when a functor is part of an equivalence purely by its properties.
 
 The criterion is stated in term of ``bijectivity'' of functors, informally. It is generally a bad idea to look at sur/injectivity of functors on objects. Instead the correct way is to look at their behaviour on morphisms.
 
@@ -529,7 +529,7 @@ which is equal to \(\alpha_B\beta_B(f)\).
 \begin{lemma}\leavevmode
   \begin{enumerate}
   \item If \(\c C\) is a balanced category then any separating family is detecting.
-  \item If \(\c C\) has equalisers (i.e.\ every pair has an equaliser) then any detecting family is separaing.
+  \item If \(\c C\) has equalisers (i.e.\ every pair has an equaliser) then any detecting family is separating.
   \end{enumerate}
 \end{lemma}
 
@@ -549,8 +549,8 @@ which is equal to \(\alpha_B\beta_B(f)\).
   \item In \(\Set\), \(1 = \{*\}\) is both a separator and a detector since it represents the identity functor \(\Set \to \Set\). Similarly \(\Z\) is both in \(\c{Gp}\) since it represents the forgetful functor \(\c{Gp} \to \Set\).
 
     Dually, \(2 = \{0, 1\}\) is a coseparator and a codetector in \(\Set\) since it represents \(P^*: \Set^{\text{op}} \to \Set\).
-  \item In \(\Top\), \(1 = \{*\}\) is a separator since it represents the forgetful functor \(\Top \to \Set\), but not a detector. In fact \(\Top\) has no detecting \emph{set} of objects: for any infinite cardinality \(\kappa\), let \(X\) be a discrete space of cardinality \(\kappa\), and \(Y\) the same set with ``co-\(\kappa\)'' topology, i.e.\ \(F \subseteq Y\) closed if and only if \(F = Y\) or \(F\) has cardinality smaller \(\kappa\). The identity map \(X \to Y\) is continuous but not a homomorphism. So if \(\{G_i: i \in I\}\) is any set of spaces, taking \(\kappa\) larger than cardinality of \(G_i\) for all \(i\) yields an exmaple to show that the set is not detecting.
-  \item Let \(\c C\) be the category of pointed conntected CW-complexes and homotopy classes of (basepoint-preserving) continuous maps. J.\ H.\ C.\ Whitehead proved that if \(X \xrightarrow{f} Y\) in this category induces isomorphisms \(\pi_n(X) \to \pi_n(Y)\) for all \(n\) then it is an isomorphism in \(\c C\). This says that \(\{S^n: n \geq 1\}\) is a detecting set for \(\c C\). But P.\ J.\ Freyd showed there is no faithful functor \(\c C \to \Set\), so no separating \emph{set}: if \(\{G_i: i \in I\}\) were separating then
+  \item In \(\Top\), \(1 = \{*\}\) is a separator since it represents the forgetful functor \(\Top \to \Set\), but not a detector. In fact \(\Top\) has no detecting \emph{set} of objects: for any infinite cardinality \(\kappa\), let \(X\) be a discrete space of cardinality \(\kappa\), and \(Y\) the same set with ``co-\(\kappa\)'' topology, i.e.\ \(F \subseteq Y\) closed if and only if \(F = Y\) or \(F\) has cardinality smaller \(\kappa\). The identity map \(X \to Y\) is continuous but not a homomorphism. So if \(\{G_i: i \in I\}\) is any set of spaces, taking \(\kappa\) larger than cardinality of \(G_i\) for all \(i\) yields an example to show that the set is not detecting.
+  \item Let \(\c C\) be the category of pointed connected CW-complexes and homotopy classes of (basepoint-preserving) continuous maps. J.\ H.\ C.\ Whitehead proved that if \(X \xrightarrow{f} Y\) in this category induces isomorphisms \(\pi_n(X) \to \pi_n(Y)\) for all \(n\) then it is an isomorphism in \(\c C\). This says that \(\{S^n: n \geq 1\}\) is a detecting set for \(\c C\). But P.\ J.\ Freyd showed there is no faithful functor \(\c C \to \Set\), so no separating \emph{set}: if \(\{G_i: i \in I\}\) were separating then
     \[
       X \mapsto \coprod_{i \in I} \c C(G_i, X)
     \]
@@ -716,7 +716,7 @@ Note that any functor of the form \(\c C(A, -)\) preserves monos, but they don't
       \c E \ar[r] &\c F
     \end{tikzcd}
   \]
-  of categories and functors, if the functors all have left adjoints, then the diagram of left adjoints commutes up to natural isomorphsms.
+  of categories and functors, if the functors all have left adjoints, then the diagram of left adjoints commutes up to natural isomorphism.
 \end{corollary}
 
 \begin{proof}
@@ -763,7 +763,7 @@ Actually, we didn't use the full strength of \Cref{lem:composition of adjoints}:
   \]
   but this also corresponds to \(1_{FA}\) so \(\varepsilon_{FA} F\eta_A = 1_{FA}\). The other identity is dual.
 
-  Conversely, suppose \(\eta\) and \(\varepsilon\) satisfying the trianglular identities. Given \(A \xrightarrow{f} GB\), let \(\Phi(f)\) be the composite
+  Conversely, suppose \(\eta\) and \(\varepsilon\) satisfying the triangular identities. Given \(A \xrightarrow{f} GB\), let \(\Phi(f)\) be the composite
   \[
     FA \xrightarrow{Ff} FGB \xrightarrow{\varepsilon_B} B
   \]
@@ -815,7 +815,7 @@ This is often summarised as ``every equivalence is an adjoint equivalence''.
       FG \ar[r, "\beta"] & 1_{\c D}
     \end{tikzcd}
   \]
-  commmutes by naturality of \(\beta\) and \(\beta\) is monic.
+  commutes by naturality of \(\beta\) and \(\beta\) is monic.
 
   Now \((\beta'_F)(F\alpha')\) is the composite
    \begin{align*}
@@ -852,7 +852,7 @@ This is often summarised as ``every equivalence is an adjoint equivalence''.
     \[
       \varepsilon_B\alpha \varepsilon_B = \varepsilon_B,
     \]
-    whence \(\varepsilon_B\alpha = 1_B\). So \(\varepsilon_B\) is an isomophism. Thus \(\varepsilon\) is an isomorphism.
+    whence \(\varepsilon_B\alpha = 1_B\). So \(\varepsilon_B\) is an isomorphism. Thus \(\varepsilon\) is an isomorphism.
   \end{enumerate}
 \end{proof}
 
@@ -867,9 +867,9 @@ This is often summarised as ``every equivalence is an adjoint equivalence''.
   \item The category \(\c{AbGp}\) of abelian groups is reflective in \(\c{Gp}\): the left adjoint sends a group \(G\) to its \emph{abelianization} \(G/G'\), where \(G'\) is the subgroup generated by all commutators \([x, y] = xyx^{-1}y^{-1}\) for \(x, y \in G\). (The unit of the adjunction is the quotient map \(G \to G/G'\))
 
     This is where the name ``reflecting subcategory'' comes from: mirror is 2D so reflection in a mirror cannot create a copy of a 3D object. However, it keeps every 2D detail fully and faithfully. Similarly abelianization does not tell you everything about \(G\) but as much as an abelian group can. c.f.\ universal property.
-  \item Given an abelian group, let \(A_T\) denote the torsion subgroup, i.e.\ the subgroup of elements of finite orders. The assigment \(A \mapsto A/A_T\) gives a left adjoint to the inclusion \(\c{tfAbGp} \to \c{AbGp}\), where \(\c{tfAbGp}\) is the full subcategory of torsion-free abelian groups.
+  \item Given an abelian group, let \(A_T\) denote the torsion subgroup, i.e.\ the subgroup of elements of finite orders. The assignment \(A \mapsto A/A_T\) gives a left adjoint to the inclusion \(\c{tfAbGp} \to \c{AbGp}\), where \(\c{tfAbGp}\) is the full subcategory of torsion-free abelian groups.
 
-    On the other hand \(A \mapsto A_T\) is the right adjoint to the inclusion \(\c{tAbGp} \to \c{AbGp}\) from torsion abelian groups to abelain groups, so this subcategory is coreflective. There are many many examples in algebra involving (co)reflective subcategories, and the constructions all give rise to important universal properries.
+    On the other hand \(A \mapsto A_T\) is the right adjoint to the inclusion \(\c{tAbGp} \to \c{AbGp}\) from torsion abelian groups to abelian groups, so this subcategory is coreflective. There are many many examples in algebra involving (co)reflective subcategories, and the constructions all give rise to important universal properties.
   \item Let \(\c{KHaus} \subseteq \Top\) be the full subcategory of compact Hausdorff spaces. The inclusion \(\c{KHaus} \to \Top\) has a left adjoint \(\beta\), the \emph{Stone-Čech compactification}\index{Stone-Čech compactification}. It is a reflective subcategory. We'll revisit this example later in the course.
   \item Let \(X\) be a topological space. We say \(A\subseteq X\) is \emph{sequentially closed} if \(x_n \to x_\infty\) and \(x_n \in A\) for all \(n\) implies \(x_\infty \in A\). Note that closed implies sequentially closed but not vice versa. We say \(X\) is \emph{sequential} if all sequentially closed sets are closed, e.g.\ a metric space. Given a non-sequential space \(X\), let \(X_s\) be the same set with topology given by the sequentially open sets (complements of sequentially closed sets) in \(X\). Certainly the identity \(X_s \to X\) is continuous, and defines the counit of an adjunction between the inclusion \(\c{Seq} \to \c{Top}\) and its right adjoint \(X \mapsto X_s\).
   \item If \(X\) is a topological space, the poset \(CX\) of closed subsets of \(X\) is reflective in \(PX\) with reflector given by closure and the poset \(OX\) of open subsets is coreflective with coreflector given by interior.
@@ -931,7 +931,7 @@ On the other hand, to express a not-necessarily-commutative square, we use the s
 
 An alternative way to understand limits is that, if \(\c C\) is locally small and \(\c J\) is small, we have a functor \(\c C^{\text{op}} \to \Set\) sending \(A\) to the set of cones with apex \(A\). A limit for \(D\) is a representation of this functor.
 
-A thrid way to visualise cones: if \(\Delta A\) denotes the constant diagram of shape \(\c J\) with all vertices \(A\) and all edges \(1_A\), then a cone over \(D\) with apex \(A\) is the same thing as a natural transformation \(\Delta A \to D\). \(\Delta\) is a functor \(\c C \to [\c J, \c C]\) and \(\Cone(D)\) is the arrow category \((\Delta \downarrow D)\). So to say that every diagram of shape \(\c J\) in \(\c C\) has a limit is equivalent to saying that \(\Delta\) has a right adjoint. (We say \(\c C\) \emph{has limits} of shape \(\c J\))
+A third way to visualise cones: if \(\Delta A\) denotes the constant diagram of shape \(\c J\) with all vertices \(A\) and all edges \(1_A\), then a cone over \(D\) with apex \(A\) is the same thing as a natural transformation \(\Delta A \to D\). \(\Delta\) is a functor \(\c C \to [\c J, \c C]\) and \(\Cone(D)\) is the arrow category \((\Delta \downarrow D)\). So to say that every diagram of shape \(\c J\) in \(\c C\) has a limit is equivalent to saying that \(\Delta\) has a right adjoint. (We say \(\c C\) \emph{has limits} of shape \(\c J\))
 
 Dually \(\c C\) has colimits of shape \(\c J\) if and only if \(\Delta: \c C \to [\c J, \c C]\) has a left adjoint.
 
@@ -1013,7 +1013,7 @@ Dually \(\c C\) has colimits of shape \(\c J\) if and only if \(\Delta: \c C \to
         C
       \end{tikzcd}
     \]
-    we ``push \(g\) along \(f\)'' to get the RHS of the colimt square.
+    we ``push \(g\) along \(f\)'' to get the RHS of the colimit square.
   \item Let \(\c J\) be the poset of natural numbers. A diagram of shape \(\c J\) is a \emph{directed system}
     \[
       A_0 \xrightarrow{f_0} A_1 \xrightarrow{f_1} A_2 \xrightarrow{f_2} A_3 \xrightarrow{f_3} \dots
@@ -1026,7 +1026,7 @@ Dually \(\c C\) has colimits of shape \(\c J\) if and only if \(\Delta: \c C \to
   \label{thm:existence of limits}
   \begin{enumerate}
   \item Suppose \(\c C\) has equalisers and all finite (respectively small) products. Then \(\c C\) has all finite (respectively small) limits.
-  \item Suppose \(\c C\) has pullbacks and a terminal object, then \(\c C\) has all finite limts.
+  \item Suppose \(\c C\) has pullbacks and a terminal object, then \(\c C\) has all finite limits.
   \end{enumerate}
 \end{theorem}
 
@@ -1083,7 +1083,7 @@ Dually \(\c C\) has colimits of shape \(\c J\) if and only if \(\Delta: \c C \to
 \end{proof}
 
 \begin{definition}[complete, cocomplete]\index{category!complete}\index{category!cocomplete}
-  We say a category \(\c C\) is \emph{complete} if it has all small limits. Dually, \(\c C\) is \emph{cocomplete} if has all small colimts.
+  We say a category \(\c C\) is \emph{complete} if it has all small limits. Dually, \(\c C\) is \emph{cocomplete} if has all small colimits.
 \end{definition}
 
 For example, \(\Set\) is both complete and cocomplete: products are cartesian products and coproducts are disjoint unions. Similarly \(\c{Gp}, \c{AbGp}, \c{Rng}, \c{Mod}_K\) are all complete and cocomplete.\footnote{Note that the products have underlying set the cartesian products of those of each component, but coproducts tend to be different. We'll discuss this later.} \(\Top\) is also complete and cocomplete, with both product and coproduct given by the underlying set.
@@ -1156,7 +1156,7 @@ The following lemma tells us how to construct limit in functor categories:
       A \ar[r, "f"] & B
     \end{tikzcd}
   \]
-  is a pullback. Hence any functor which preserves pullbacks preserves monomorphisms. In particular if \(\c D\) has pullbacks momomorphisms in \([\c C, \c D]\) are just pointwise monos. See example sheet 1 for a counterexample for the neccessity of the pullback condition. Now we can delete the word ``pointwise'' in the statement of \Cref{lem:representable functors are projectives}.
+  is a pullback. Hence any functor which preserves pullbacks preserves monomorphisms. In particular if \(\c D\) has pullbacks monomorphisms in \([\c C, \c D]\) are just pointwise monos. See example sheet 1 for a counterexample for the necessity of the pullback condition. Now we can delete the word ``pointwise'' in the statement of \Cref{lem:representable functors are projectives}.
 \end{remark}
 
 \begin{theorem}[right adjoint preserves limits]\index{right adjoint preserves limits}
@@ -1192,14 +1192,14 @@ The last major theorem in this chapter is adjoint functor theorem. It says that 
 \end{lemma}
 
 \begin{proof}
-  Suppose given \(D: \c J \to (A \downarrow G)\). Write \(D(j)\) as \((UD(j), f_j)\). Let \((L, (\lambda_j: L \to UD(j))_{j \in \ob \c J})\) be a limit for \(UD\). Then \((GL, (\lambda_j)_{j \in \ob \c J})\) is a limit for \(GUD\). Since the edges of \(UD\) are morphisms in \((A \downarrow G)\), the \(f_j\) form a cone over \(GUD\) so there is a unique \(h: A \to GL\) such that \((G\lambda_j)h = f_j\) for all \(j\), i.e.\ there's a unique \(h\) such that the \(\lambda_j\)'s are all morphisms in \((L, h) \to (UD(j), f_j)\) in \((A \downarrow G)\). We need to show that \(((L, h), (\lambda_j)_{j \in \ob \c J})\) is a limit cone in \((A \downarrow G)\). If \((C, (\mu_j)_{j \in \ob \c J})\) is any cone over \(\c D\) then \((C, (\mu_j)_{j \in \ob \c J})\) is a cone over \(UD\) so ther is a unique \(\ell: C \to L\) with \(\lambda_j \ell = \mu_j\) for all \(j\). We need to show \((G\ell) k = h\). But
+  Suppose given \(D: \c J \to (A \downarrow G)\). Write \(D(j)\) as \((UD(j), f_j)\). Let \((L, (\lambda_j: L \to UD(j))_{j \in \ob \c J})\) be a limit for \(UD\). Then \((GL, (\lambda_j)_{j \in \ob \c J})\) is a limit for \(GUD\). Since the edges of \(UD\) are morphisms in \((A \downarrow G)\), the \(f_j\) form a cone over \(GUD\) so there is a unique \(h: A \to GL\) such that \((G\lambda_j)h = f_j\) for all \(j\), i.e.\ there's a unique \(h\) such that the \(\lambda_j\)'s are all morphisms in \((L, h) \to (UD(j), f_j)\) in \((A \downarrow G)\). We need to show that \(((L, h), (\lambda_j)_{j \in \ob \c J})\) is a limit cone in \((A \downarrow G)\). If \((C, (\mu_j)_{j \in \ob \c J})\) is any cone over \(\c D\) then \((C, (\mu_j)_{j \in \ob \c J})\) is a cone over \(UD\) so there is a unique \(\ell: C \to L\) with \(\lambda_j \ell = \mu_j\) for all \(j\). We need to show \((G\ell) k = h\). But
   \[
     (G\lambda_j) (G\ell) k = (G \mu_j)k = f_j = (G\lambda_j)h
   \]
   for all \(j\) so \((G\ell) k = h\) by uniqueness of factorisations through limits.
 \end{proof}
 
-Recall that we have seen a limit for the empty diagram is a terminal object. We can also consider dually the diagram of ``maximal size'', namely that of a category over itself, to realise inital object as a limit. Think for example posets, in which limit for an empty diagram is maximimum while limit for the
+Recall that we have seen a limit for the empty diagram is a terminal object. We can also consider dually the diagram of ``maximal size'', namely that of a category over itself, to realise initial object as a limit. Think for example posets, in which limit for an empty diagram is maximum while limit for the
 
 \begin{lemma}
   A category \(\c C\) has an initial object if and only if \(1_{\c C}: \c C \to \c C\), regarded as a diagram of shape \(\c C\) in \(\c C\), has a limit.
@@ -1248,17 +1248,17 @@ The primeval adjoint functor theorem follows immediately from the previous two l
       P \ar[r, shift left, "\vdots"'] \ar[r, shift right] & P
     \end{tikzcd}
   \]
-  where edges are all the endomorphisms of \(P\). Denote it \(i: I \to P\). \(I\) is also weakly initial in \(\mathcal A\). Suppose given \(f, g: I \to C\). Form the equaliser \(e: E \to I\) of \((f, g)\). Then there exists \(h: P \to E\) since \(P\) is weakly initial. \(ieh: P \to P\) and \(1_P\) are edegs of the diagram so \(i = iehi\). But \(i\) is monic so \(ehi = 1_I\) so \(e\) is split epic so \(f = g\). Thus \(I\) is initial.
+  where edges are all the endomorphisms of \(P\). Denote it \(i: I \to P\). \(I\) is also weakly initial in \(\mathcal A\). Suppose given \(f, g: I \to C\). Form the equaliser \(e: E \to I\) of \((f, g)\). Then there exists \(h: P \to E\) since \(P\) is weakly initial. \(ieh: P \to P\) and \(1_P\) are edges of the diagram so \(i = iehi\). But \(i\) is monic so \(ehi = 1_I\) so \(e\) is split epic so \(f = g\). Thus \(I\) is initial.
 \end{proof}
 
 \begin{eg}\leavevmode
   \begin{enumerate}
-  \item This example comes from Mac Lane. He asked the question that, if we are not given the free group functor, how can we to construct the left adjoint of forgetful functor? Consider the forgetful functor \(U: \c{Gp} \to \Set\). By 4.6a \(U\) creates all small limits so \(\c{Gp}\) has them and \(U\) preserves them. \(\c{Gp}\) is locally smal, given a set \(A\), any \(f: A \to UG\) factors as
+  \item This example comes from Mac Lane. He asked the question that, if we are not given the free group functor, how can we to construct the left adjoint of forgetful functor? Consider the forgetful functor \(U: \c{Gp} \to \Set\). By 4.6a \(U\) creates all small limits so \(\c{Gp}\) has them and \(U\) preserves them. \(\c{Gp}\) is locally small, given a set \(A\), any \(f: A \to UG\) factors as
     \[
       A \to UG' \to UG
     \]
-    where \(G'\) is the subgroup generated by \(\{f(x): x \in A\}\) and \(\operatorname{card} G' \leq \max\{\aleph_0, \operatorname{card} A\}\). Let \(B\) be a set of this cardinality. Consider all subsets \(B' \subseteq B\), all group structures on \(B'\) and all mappings \(A \to B'\). These give us a solution set at \(A\). % grudge against Mac Lane. Similar as http://wwwf.imperial.ac.uk/~buzzard/maths/research/notes/the_adjoint_functor_theorem.pdf
-  \item Consider the category \(\c{CLat}\) of complete lattices (posets with arbitrary meets and joints). Again the forgetful functor \(U: \c{CLat} \to \Set\) creates all small limits. But A.\ W.\ Hales showed in 1964 that for any cardinal \(\kappa\) there exists complete lattices of cardinality \(\geq \kappa\) generated by three elements. So the solution set condition fails at \(A = \{x, y, z\}\) as we cannot bound the cartinality of the solution set, and \(U\) doesn't have a left adjoint.
+    where \(G'\) is the subgroup generated by \(\{f(x): x \in A\}\) and \(\operatorname{card} G' \leq \max\{\aleph_0, \operatorname{card} A\}\). Let \(B\) be a set of this cardinality. Consider all subsets \(B' \subseteq B\), all group structures on \(B'\) and all mappings \(A \to B'\). These give us a solution set at \(A\). % grudge against Mac Lane. Similar as http://www.imperial.ac.uk/~buzzard/maths/research/notes/the_adjoint_functor_theorem.pdf
+  \item Consider the category \(\c{CLat}\) of complete lattices (posets with arbitrary meets and joints). Again the forgetful functor \(U: \c{CLat} \to \Set\) creates all small limits. But A.\ W.\ Hales showed in 1964 that for any cardinal \(\kappa\) there exists complete lattices of cardinality \(\geq \kappa\) generated by three elements. So the solution set condition fails at \(A = \{x, y, z\}\) as we cannot bound the cardinality of the solution set, and \(U\) doesn't have a left adjoint.
   \end{enumerate}
 \end{eg}
 
@@ -1315,7 +1315,7 @@ Before stating and proving the special functor theorem we point out a simple yet
   \]
   is coseparating in \((A \downarrow G)\): given \(g, h: (B, f) \to (B', f')\) in \((A \downarrow G)\) with \(g \neq h\), there exists \(k: B' \to S_i\) for some \(i\) with \(kg \neq kh\), and then \(k\) is also a morphism \((B', f') \to (S_i, (Gk) f')\) in \((A \downarrow G)\).
 
-  So we need to show that if \(\mathcal A\) is complete, locally small and well-powered and has a coseparating set \(\{S_i: i \in I\}\) then \(\mathcal A\) has an initial object. Form the product \(P = \prod_i \in S_i\). We have the industrial stength product and now we need the industrial strength pullback. Consider the diagram
+  So we need to show that if \(\mathcal A\) is complete, locally small and well-powered and has a coseparating set \(\{S_i: i \in I\}\) then \(\mathcal A\) has an initial object. Form the product \(P = \prod_i \in S_i\). We have the industrial strength product and now we need the industrial strength pullback. Consider the diagram
   \[
     \begin{tikzcd}[row sep=tiny, column sep=tiny]
       & & P_j \ar[dddr, rightarrowtail] & P_i \ar[ddd, rightarrowtail] \\
@@ -1355,12 +1355,12 @@ Before stating and proving the special functor theorem we point out a simple yet
 This result is due to Freyd, who first published it in a book as an exercise to the readers (!).
 
 \begin{eg}
-  Consider the inclusion \(I: \c{KHaus} \to \c{Top}\), where \(\c{KHaus}\) is the full subcategory of compact Hausdorff spaces. \(\c{KHaus}\) has and \(I\) preserves small products (by Tychonoff's theorem) and equalisers (since equalisers of pairs \(f, g: X \to Y\) with \(Y\) Hausdorff are closed subspaces). Both cateogories are locally small and \(\c{KHaus}\) is well-powered (subobjects of \(X\) are isomorphic to closed subspaces). The closed interval \([0, 1]\) is a coseparateor in \(\c{KHaus}\) by Urysohn's lemma. So by special adjoint functor theorem \(I\) has a left adjoint \(\beta\), the Stone-Čech compactification\index{Stone-Čech compactification}.
+  Consider the inclusion \(I: \c{KHaus} \to \c{Top}\), where \(\c{KHaus}\) is the full subcategory of compact Hausdorff spaces. \(\c{KHaus}\) has and \(I\) preserves small products (by Tychonoff's theorem) and equalisers (since equalisers of pairs \(f, g: X \to Y\) with \(Y\) Hausdorff are closed subspaces). Both categories are locally small and \(\c{KHaus}\) is well-powered (subobjects of \(X\) are isomorphic to closed subspaces). The closed interval \([0, 1]\) is a coseparateor in \(\c{KHaus}\) by Urysohn's lemma. So by special adjoint functor theorem \(I\) has a left adjoint \(\beta\), the Stone-Čech compactification\index{Stone-Čech compactification}.
 \end{eg}
 
 \begin{remark}\leavevmode
   \begin{enumerate}
-  \item % I've never asked Freyed but this is probabily how he gets the inspiration for AFT. not from Marshall Stone's proof
+  \item % I've never asked Freyd but this is probably how he gets the inspiration for AFT. not from Marshall Stone's proof
 
   Čech's construction of \(\beta\) is as follow: given \(X\), form
   \[
@@ -1400,7 +1400,7 @@ by the triangle inequalities, and 3
 by naturality of \(\varepsilon\).
 
 \begin{definition}[monad]\index{monad}\index{unit}\index{multiplication}
-  A \emph{monad} \(\T = (T, \eta, \mu)\) on a category \(\c C\) consists of a functor \(T: \c C \to \c C\) and natural transofrmations \(\eta: 1_{\c C} \to T, \mu: TT \to T\) satisfying commutative diagrams 1 - 3.
+  A \emph{monad} \(\T = (T, \eta, \mu)\) on a category \(\c C\) consists of a functor \(T: \c C \to \c C\) and natural transformations \(\eta: 1_{\c C} \to T, \mu: TT \to T\) satisfying commutative diagrams 1 - 3.
 
   \(\eta\) and \(\mu\) are called the \emph{unit} and \emph{multiplication} of \(\T\).
 \end{definition}
@@ -1417,7 +1417,7 @@ The name ``monad'' was used because of the similarity of axioms of monad with th
 
 Does every monad comes from an adjunction? The answer is yes and is given independently in 1965 by Eilenberg, Moore and Kleisli. We will cover both.
 
-In example 2 above we have the cateogry \([M, \Set]\). Its forgetful functor to \(\Set\) has a left adjoint, sending \(A\) to \(M \times A\) with \(M\) acting by multiplication on the left factor. This adjunction gives rise to the monad.
+In example 2 above we have the category \([M, \Set]\). Its forgetful functor to \(\Set\) has a left adjoint, sending \(A\) to \(M \times A\) with \(M\) acting by multiplication on the left factor. This adjunction gives rise to the monad.
 
 \begin{definition}[Eilenberg-Moore algebra]\index{algebra}
   Let \(\T\) be a monad on \(\c C\). A \emph{\(\T\)-algebra} is a pair \((A, \alpha)\) with \(A \in \ob \c C\) and \(\alpha: TA \to A\) satisfying commutative diagrams 4, 5
@@ -1462,7 +1462,7 @@ In example 2 above we have the cateogry \([M, \Set]\). Its forgetful functor to 
   by definition of \(F^\T A\).
 \end{proof}
 
-Kleisli took a ``minimalist'' approach: if \(F: \c C \to \c D, G: \c D \to \c C\) induces \(\T\) then so does \(F: \c C \to \c D', G 1_{\c D'}: \c D' \to \c C\) where \(\c D'\) is the full subcategory of \(\c D\) on objects \(FA\). So in trying to construct \(\c D\), we may assume \(F\) is surjective (or indeed bijective) on objects. But then morphisms \(FA \to FB\) correspond bijectively to morphisms \(A \to GFB = TB\) in \(\c C\). This leads us half way through as we sitll have to specify how to compose morphisms (in general domains and codomains don't match up).
+Kleisli took a ``minimalist'' approach: if \(F: \c C \to \c D, G: \c D \to \c C\) induces \(\T\) then so does \(F: \c C \to \c D', G 1_{\c D'}: \c D' \to \c C\) where \(\c D'\) is the full subcategory of \(\c D\) on objects \(FA\). So in trying to construct \(\c D\), we may assume \(F\) is surjective (or indeed bijective) on objects. But then morphisms \(FA \to FB\) correspond bijectively to morphisms \(A \to GFB = TB\) in \(\c C\). This leads us half way through as we still have to specify how to compose morphisms (in general domains and codomains don't match up).
 
 \begin{definition}[Kleisli category]\index{Kleisli category}
   Given a monad \(\T\) on \(\c C\), the \emph{Kleisli category} \(\c C_\T\) has \(\ob \c C_\T = \ob \c C\) and morphisms
@@ -1511,7 +1511,7 @@ The unit laws similarly follow from
     TA \ar[r, "Tf"] & TTB \ar[r, "\mu_B"] & TB
   \end{tikzcd}
 \]
-(used diagram 1 and 2 respecitively in the triangles)
+(used diagram 1 and 2 respectively in the triangles)
 
 \begin{lemma}
   There exists an adjunction \(F_\T: \c C \to \c C_\T, G_\T: \c C_T \to \c C\) inducing the monad \(\T\).
@@ -1640,7 +1640,7 @@ The unit laws similarly follow from
     GF_\T A &= FA \\
     LF_\T(A \xrightarrow{f} B) &= (\varepsilon_{FB}) (F\eta_B) (Ff) = Ff
   \end{align*}
-  For future reference, note that \(L\) is full and faithful: its effect on morphisms (with blue domains and codmains) is that of transposition across \(F \adjoint G\).
+  For future reference, note that \(L\) is full and faithful: its effect on morphisms (with blue domains and codomains) is that of transposition across \(F \adjoint G\).
 
   Finally for uniqueness, suppose \(L': \c C_\T \to \c D\) is a morphism of \(\c{Adj}(\T)\). We must have \(L'A = FA\) and \(L'\) maps the counit \(TA \blue{\to} A\) to the counit \(FGFA \xrightarrow{\varepsilon_{FA}} FA\). For any \(A \blue{\xrightarrow{f}} B\), we have
   \begin{align*}
@@ -1664,7 +1664,7 @@ If \(\c C\) has coproducts then so does \(\c C_\T\) since \(F_\T\) preserves the
     \[
       TL \xrightarrow{T\mu_j} TGD(j) \xrightarrow{\delta_j} GD(j)
     \]
-    form a cone over \(GD\) since the edges of \(GD\) are homomorphisms, so they induce a unique \(\lambda: TL \to L\) such that \(\mu_j \lambda = \delta_j(T_\mu)\) for all \(j\). The fact that \(\lambda\) is a \(\T\)-algebra structure on \(L\) follows from the fact that the \(\delta_j\) are algebra structure and uniqueness of factorisations through limits. So \(((L, \lambda), (\mu_j: j \in \ob \c J))\) is the unique lifting of the limit cone over \(GD\) to a cone over \(D\), and it's a limit, since given a conve over \(D\) with apex \((A, \alpha)\), we get a unique factorisation \(A \xrightarrow{f} L\) in \(\c C\), and \(F\) is an algebra homomorphism by uniqueness of factorisation through \(L\).
+    form a cone over \(GD\) since the edges of \(GD\) are homomorphisms, so they induce a unique \(\lambda: TL \to L\) such that \(\mu_j \lambda = \delta_j(T_\mu)\) for all \(j\). The fact that \(\lambda\) is a \(\T\)-algebra structure on \(L\) follows from the fact that the \(\delta_j\) are algebra structure and uniqueness of factorisations through limits. So \(((L, \lambda), (\mu_j: j \in \ob \c J))\) is the unique lifting of the limit cone over \(GD\) to a cone over \(D\), and it's a limit, since given a cone over \(D\) with apex \((A, \alpha)\), we get a unique factorisation \(A \xrightarrow{f} L\) in \(\c C\), and \(F\) is an algebra homomorphism by uniqueness of factorisation through \(L\).
   \item For \(\implies\) direction, \(F: \c C \to \c C^\T\) preserves colimits since it is a left adjoint, so \(T = GF\) preserves colimits of shape \(\c J\).
 
     For \(\impliedby\) direction, suppose given \(D: \c J \to \c C^\T\) as in 1, and a colimit cone \((GD(j) \xrightarrow{\mu_j} L: j \in \ob \c J)\) in \(\c C\), then \((TGD(j) \xrightarrow{T\mu_j} TL: j \in \ob \c C)\) is also a colimit cone, so the composite
@@ -1676,10 +1676,10 @@ If \(\c C\) has coproducts then so does \(\c C_\T\) since \(F_\T\) preserves the
 \end{proof}
 
 \begin{definition}[monadicity]\index{monadicity}
-  Given an adjunctin \(F \adjoint G\), we say the adjunction (or the functor \(G\)) is \emph{monadic} if the comparison functor \(K: \c D \to \c C^\T\) is part of an equivalence of categories.
+  Given an adjunction \(F \adjoint G\), we say the adjunction (or the functor \(G\)) is \emph{monadic} if the comparison functor \(K: \c D \to \c C^\T\) is part of an equivalence of categories.
 \end{definition}
 
-Note that since the Kleisi comparison \(\c C_\T \to \c D\) is full and faithful, it's part of an equivalence if and only if it (equivalently, \(F\)) is essentially surjective on objects.
+Note that since the Kleisli comparison \(\c C_\T \to \c D\) is full and faithful, it's part of an equivalence if and only if it (equivalently, \(F\)) is essentially surjective on objects.
 
 \begin{remark}
   Given any adjunction \(F \adjoint G\), for each object \(B\) of \(\c D\) we have a diagram
@@ -1748,7 +1748,7 @@ Note that the aforementioned pair
   \end{tikzcd}
 \]
 is reflexive with \(r = F\eta_{GB'}\).
- 
+
 \begin{lemma}
   Suppose given an adjunction
   \begin{tikzcd}

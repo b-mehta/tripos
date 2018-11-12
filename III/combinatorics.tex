@@ -32,7 +32,7 @@
   We write \(X^{(r)} = \{A \subseteq X: |A| = r\}\)
 \end{eg}
 
-In this course we almost deal exclusively with finite setss so unless otherwise stated, in this course we assume all sets are finite and \(X = [n] = \{1, 2, \dots, n\}\).
+In this course we almost deal exclusively with finite sets so unless otherwise stated, in this course we assume all sets are finite and \(X = [n] = \{1, 2, \dots, n\}\).
 
 For example, \(|X^{(r)}| = \binom{n}{r}\). More concretely, for example,
 \[
@@ -54,7 +54,7 @@ What is the mental picture for power set? Often we make \(\powerset (X)\) into a
 
 If we identify a set \(A \subseteq X\) with a \(\{0, 1\}\) sequence of length \(n\) (e.g.\ \(134 \leftrightarrow 1011000 \cdots 0\)), via \(A \leftrightarrow \mathbf{1}_A \text{ or } \chi_A\). In this way, we can represent \(Q_n\) as a \(n\)-dimensional cube:
 
-For this reason, \(Q_n\) is often called the \emph{hypercube} or \emph{discrete cube} or \emph{\(n\)-cube}. In this way, the study of a set system become the study of a graph.
+For this reason, \(Q_n\) is often called the \emph{hypercube} or \emph{discrete cube} or \emph{\(n\)-cube}. In this way, the study of a set system becomes the study of a graph.
 
 \subsection{Chains \& Antichains}
 
@@ -115,8 +115,8 @@ Pause for a moment and consider the longest chain problem. Why can a chain meet 
 
 \begin{remark}\leavevmode
   \begin{enumerate}
-  \item \(\binom{n}{\floor{n/2}}\) is achieveable, e.g.\ \(\mathcal A = X^{(\floor{n/2})}\).
-  \item Note that the theorem says nothing about extremal cases --- which antinchain have this size?
+  \item \(\binom{n}{\floor{n/2}}\) is achievable, e.g.\ \(\mathcal A = X^{(\floor{n/2})}\).
+  \item Note that the theorem says nothing about extremal cases --- which antichains have this size?
   \end{enumerate}
 \end{remark}
 
@@ -197,7 +197,7 @@ for all \(a \in \mathcal A, i \in A, j \notin A\). Hence \(\mathcal A = X^{(r)}\
   \]
   by local LYM.
 
-  Also \(\shadow (\shadow \mathcal A_n \cup \mathcal A_{n - 1})\) is distint from \(\mathcal A_{n - 2}\), again since \(\mathcal A\) is an antichain. Thus
+  Also \(\shadow (\shadow \mathcal A_n \cup \mathcal A_{n - 1})\) is disjoint from \(\mathcal A_{n - 2}\), again since \(\mathcal A\) is an antichain. Thus
   \[
     \frac{|\shadow (\shadow \mathcal A_n \cup \mathcal A_{n -1})|}{\binom{n}{n - 2}} +\frac{|\mathcal A_{n - 2}|}{\binom{n}{n - 2}} \leq 1,
   \]
@@ -272,7 +272,7 @@ Equivalently, \(a_i < b_i\), where \(i = \min\{j: a_j \neq b_i\}\). The slogan i
 However, in the shadow minimisation problem we want to avoid large numbers as much as possible, i.e.\ keep the largest number as small as possible.
 
 \begin{definition}[colexicographic order]\index{colexicographic order}
-  Say \(A < B\) isn the \emph{colexicographic} or \emph{colex} order if for some \(i\) have \(a_i < b_i\) and \(a_j = b_j\) for all \(j > i\).
+  Say \(A < B\) in the \emph{colexicographic} or \emph{colex} order if for some \(i\) have \(a_i < b_i\) and \(a_j = b_j\) for all \(j > i\).
 \end{definition}
 
 Equivalently, \(a_i < b_i\) where \(i = \max\{j: a_j \neq b_j\}\). The slogan is ``avoid large number''. Equivalently, \(A < B\) if \(\sum_{i \in A} 2^i < \sum_{i \in B} 2^i\).
@@ -294,7 +294,7 @@ Equivalently, \(a_i < b_i\) where \(i = \max\{j: a_j \neq b_j\}\). The slogan is
   In colex, \([k]^{(r)}\) is an initial segment of \([k + 1]^{(r)}\), meaning that it is the first \(t\) elements for some \(t\). Therefore we could view colex as an enumeration of \(\N^{(r)}\). Try this with lex and see what happens!
 \end{note}
 
-Following our heuristics just now, the aim is to show initial segments of cloex minimise \(\shadow\), i.e.\ if \(\mathcal A \subseteq X^{(r)}\) and \(\mathcal C \subseteq X^{(r)}\) is the first \(|\mathcal A|\) \(r\)-sets in colex then \(|\shadow \mathcal A| \geq |\shadow \mathcal C|\), This is Kruskal-Katona theorem, the first theorem in combinatorics.
+Following our heuristics just now, the aim is to show initial segments of colex minimise \(\shadow\), i.e.\ if \(\mathcal A \subseteq X^{(r)}\) and \(\mathcal C \subseteq X^{(r)}\) is the first \(|\mathcal A|\) \(r\)-sets in colex then \(|\shadow \mathcal A| \geq |\shadow \mathcal C|\), This is Kruskal-Katona theorem, the first theorem in combinatorics.
 In particular, \(|\mathcal A| = \binom{k}{r}\) implies \(|\shadow \mathcal A| \geq \binom{k}{r - 1}\). However, unless \(\mathcal A\) is written in very nice form, it is very difficult to estimate \(\shadow \mathcal A\).
 
 \subsubsection{Compressions}
@@ -447,8 +447,8 @@ However, note that \(\mathcal A\) in the above example is not left-compressed. I
   \]
 \end{remark}
 
-\begin{theorem}[Krustal-Katona]\index{Krustal-Katona theorem}
-  \label{thm:Krustal-Katona}
+\begin{theorem}[Kruskal-Katona]\index{Kruskal-Katona theorem}
+  \label{thm:Kruskal-Katona}
   Let \(\mathcal A \subseteq X^{(r)}\) where \(1 \leq r \leq n\) and let \(\mathcal C\) be the initial segment of colex on \(X^{(r)}\) with \(|\mathcal C| = |\mathcal A|\), then
   \[
     |\shadow \mathcal A| \geq |\shadow \mathcal C|.
@@ -489,7 +489,7 @@ However, note that \(\mathcal A\) in the above example is not left-compressed. I
     \[
       |\shadow \mathcal A| \geq \binom{k_r}{k - 1} + \binom{k_{r - 1}}{r - 2} + \dots + \binom{k_s}{s - 1}.
     \]
-  \item In proof of Krustal-Katona we used only \Cref{prop:UV-compression}, but neither \Cref{prop:ij-compression} nor \Cref{prop:left compression decreases shadow}. However, deriving simpler results for \(ij\)-compression provides motivation and intuition for the further full-fledged proof.
+  \item In proof of Kruskal-Katona we used only \Cref{prop:UV-compression}, but neither \Cref{prop:ij-compression} nor \Cref{prop:left compression decreases shadow}. However, deriving simpler results for \(ij\)-compression provides motivation and intuition for the further full-fledged proof.
   \item Can we ask for uniqueness? We can check that if \(|\shadow \mathcal A| = |\shadow \mathcal C|\) and \(|\mathcal A| = \binom{k}{r}\) then \(\mathcal A = Y^{(r)}\) for some \(k\)-set \(Y\). Thus this is unique up to isomorphism. But in general it is not true that \(|\shadow \mathcal A| = |\shadow \mathcal C|\) implies \(\mathcal A\) is isomorphic to \(\mathcal C\) (\(\mathcal A \subseteq \powerset(X), \mathcal B \subseteq \powerset(Y)\) are isomorphic if there exists a bijection between \(X\) and \(Y\) sending \(\mathcal A\) to \(\mathcal B\)).
   \end{enumerate}
 \end{remark}
@@ -506,7 +506,7 @@ What about upper shadow?
 Note that \(A < B\) in colex if and only if \(A^c < B^c\) in lex with ground-set order reversed. You can mess around with complement and other set operations, but think about it until it becomes clear!
 
 \begin{corollary}
-  Let \(\mathcal A \subseteq X^{(r)}\) wher \(0 \leq r \leq n - 1\) and let \(\mathcal C\) be the initial segment of lex with \(|\shadow C| = |\mathcal A|\). Then
+  Let \(\mathcal A \subseteq X^{(r)}\) where \(0 \leq r \leq n - 1\) and let \(\mathcal C\) be the initial segment of lex with \(|\shadow C| = |\mathcal A|\). Then
   \[
     |\shadow^+ \mathcal A| \geq |\shadow^+ \mathcal C|.
   \]
@@ -525,7 +525,7 @@ then
   \shadow \mathcal C = \{B \subseteq X^{(r - 1)}: B \leq a_2,\dots,a_r\}.
 \]
 
-Krustal-Katona also proves a generalised version of itself:
+Kruskal-Katona also proves a generalised version of itself:
 
 \begin{corollary}
   Let \(\mathcal A \subseteq X^{(r)}\) and let \(\mathcal C \subseteq X^{(r)}\) be the initial segment of colex with \(|\mathcal C| = |\mathcal A|\). Then
@@ -539,7 +539,7 @@ Krustal-Katona also proves a generalised version of itself:
 \end{corollary}
 
 \begin{proof}
-  If \(|\shadow^t \mathcal A| \geq |\shadow^t \mathcal C|\) then \(|\shadow^{t + 1}\mathcal A| \geq |\shadow^{t + 1} \mathcal C|\) by \nameref{thm:Krustal-Katona}.
+  If \(|\shadow^t \mathcal A| \geq |\shadow^t \mathcal C|\) then \(|\shadow^{t + 1}\mathcal A| \geq |\shadow^{t + 1} \mathcal C|\) by \nameref{thm:Kruskal-Katona}.
 \end{proof}
 
 \subsection{Intersecting families}
@@ -590,13 +590,13 @@ so \(\mathcal A\) beats \(\mathcal B\).
 \end{theorem}
 
 \begin{proof}[Proof 1]
-  ``Bubble down with Krustal-Katona''
+  ``Bubble down with Kruskal-Katona''
 
   For \(A, B \in \mathcal A\) have \(A \cap B \neq \emptyset\), i.e.\ \(A \nsubseteq B^c\). Write
   \[
     \overline{\mathcal A} = \{A^c: A \in \mathcal A\} \subseteq X^{(n - r)}.
   \]
-  This says that \(\shadow^{n - 2r}\overline{\mathcal A}\) is disjoint from \(A\). Suppose \(|\mathcal A| > \binom{n - 1}{r - 1}\). Then \(|\overline{\mathcal A}| = \binom{n - 1}{r - 1} = \binom{n - 1}{n - r}\) so by iterated Krustal-Katona, have
+  This says that \(\shadow^{n - 2r}\overline{\mathcal A}\) is disjoint from \(A\). Suppose \(|\mathcal A| > \binom{n - 1}{r - 1}\). Then \(|\overline{\mathcal A}| = \binom{n - 1}{r - 1} = \binom{n - 1}{n - r}\) so by iterated Kruskal-Katona, have
   \[
     |\shadow^{n - 2r} \overline{\mathcal A}| \geq \binom{n - 1}{r}.
   \]
@@ -625,17 +625,17 @@ so \(\mathcal A\) beats \(\mathcal B\).
 \begin{remark}\leavevmode
   \begin{enumerate}
   \item Equivalently, we are double-counting the edges in the bipartite graph with vertex classes \(\mathcal A\) and all cyclic orderings, in which \(A \in \mathcal A\) is joined to \(c\) if \(A\) is an interval in \(c\).
-  \item This method, by construcint an clever auxillary object and counting a parameter of it in two ways, is called \emph{averaging} or \emph{Katona's method}.
+  \item This method, by constructing an clever auxiliary object and counting a parameter of it in two ways, is called \emph{averaging} or \emph{Katona's method}.
   \end{enumerate}
 \end{remark}
 
-We may ask when we have equality in Erdős-Ko-Rado. We can check that equality holds if and only if \(\mathcal A = \{A \in X^{(r)}: i \in A\}\) for some \(i\). This follows (proof 1) from equality case of Krustal-Katona (when size is nice), or (proof 2) by considering changing the cyclic ordering bit by bit.
+We may ask when we have equality in Erdős-Ko-Rado. We can check that equality holds if and only if \(\mathcal A = \{A \in X^{(r)}: i \in A\}\) for some \(i\). This follows (proof 1) from equality case of Kruskal-Katona (when size is nice), or (proof 2) by considering changing the cyclic ordering bit by bit.
 
 \section{Isoperimetric inequalities}
 
-The general theme in this chapter is the question ``how tightly can we pack a subset of given size in a space''. Many results in combinatorics follow from this chapter, and Krustal-Katona is almost one of the cases.
+The general theme in this chapter is the question ``how tightly can we pack a subset of given size in a space''. Many results in combinatorics follow from this chapter, and Kruskal-Katona is almost one of the cases.
 
-To motivate the name ``isoperimetric'', observe the basic fact in geometry that among subsets of \(\R^2\) of given area, a disc has smallest perimeter. Similarly among subsets of \(\R^3\) of given volume, a ball has smallest sufrace area. Among subsets of \(S^2\) of given area, the cap has the smallest perimeter. What are the corresponding notions in discrete settings, say subgraphs of a graph? Obviously the ``volume'' should be the number of vertices. What about the ``surface area'' and more generally, its boundary?
+To motivate the name ``isoperimetric'', observe the basic fact in geometry that among subsets of \(\R^2\) of given area, a disc has smallest perimeter. Similarly among subsets of \(\R^3\) of given volume, a ball has smallest surface area. Among subsets of \(S^2\) of given area, the cap has the smallest perimeter. What are the corresponding notions in discrete settings, say subgraphs of a graph? Obviously the ``volume'' should be the number of vertices. What about the ``surface area'' and more generally, its boundary?
 
 \begin{definition}[boundary]
   For a set \(A\) of vertices in a graph \(G\), the \emph{boundary} of \(A\) is
@@ -645,7 +645,7 @@ To motivate the name ``isoperimetric'', observe the basic fact in geometry that 
 \end{definition}
 
 \begin{eg}
-  In the followin graph if \(A = \{1, 2, 3\}\) then \(b(A) = \{4, 5\}\).
+  In the following graph if \(A = \{1, 2, 3\}\) then \(b(A) = \{4, 5\}\).
   \begin{center}
     \begin{tikzpicture}
       \Vertex[x=0,y=0]{1}
@@ -666,7 +666,7 @@ An \emph{isopertimetric inequality}\index{isoperimetric inequality} of \(G\) is 
 \[
   b(A) \geq f(|A|)
 \]
-for \(A \subseteq V(G)\). This should be a ``good'' (at least nontrivial) inequality, which warrants that such an inequality should decribe a fixed graph, and not applicable to graphs in general.
+for \(A \subseteq V(G)\). This should be a ``good'' (at least nontrivial) inequality, which warrants that such an inequality should describe a fixed graph, and not applicable to graphs in general.
 
 To minimise the size \(b(A)\) is equivalently to (and usually easier to) the size of
 
@@ -686,7 +686,7 @@ Let's test it. Take \(|A| = 4\) in \(Q_3\). Then in the discrete \(A\) is either
 \[
   N(A) = X^{(\leq r + 1)} \cup \shadow^+ B,
 \]
-so by Krustal-Katona, we'd take \(B\) to be an initial segment of lex on \(X^{(r + 1)}\). This strongly suggests that there is a ordering on \(\powerset(X)\), where subsets are ordered by sizes and lex is used to decide order amongs subsets of equal size, such that the boundary minimising sets are the initial segments of this order.
+so by Kruskal-Katona, we'd take \(B\) to be an initial segment of lex on \(X^{(r + 1)}\). This strongly suggests that there is a ordering on \(\powerset(X)\), where subsets are ordered by sizes and lex is used to decide order among subsets of equal size, such that the boundary minimising sets are the initial segments of this order.
 
 \begin{definition}[simplicial order]\index{simplicial order}
   The \emph{simplicial order} on \(Q_n\) is defined by \(x < y\) if either \(|x| \leq |y|\) or \(|x| = |y|\) and \(x < y\) in lex.
@@ -696,7 +696,7 @@ so by Krustal-Katona, we'd take \(B\) to be an initial segment of lex on \(X^{(r
   In this chapter we use roman instead of curly upper case letters such as \(A, B\) to denote a family of subsets of \(X\), and lower case letters such as \(x, y\) to denote element of \(X\). This is compatible with the vertex convention in graph theory.
 \end{notation}
 
-Our aim is to show that initial segments of simplicial are the best. As we have Krustal Katona at disposal, we would like to do similar ``compressions'' to move a set ``closer'' to Hamming ball. In the proof of Krustal Katona the compressions \(C_{UV}\) can be seen as operations of dimension \(|U|\) in the discrete cube. Here we consider ``codimension \(1\)'' compression.
+Our aim is to show that initial segments of simplicial are the best. As we have Kruskal-Katona at disposal, we would like to do similar ``compressions'' to move a set ``closer'' to Hamming ball. In the proof of Kruskal-Katona the compressions \(C_{UV}\) can be seen as operations of dimension \(|U|\) in the discrete cube. Here we consider ``codimension \(1\)'' compression.
 
 \begin{definition}[section]\index{section}
   Given \(A \subseteq Q_n\) and \(1 \leq i \leq n\), the \emph{\(i\)-sections} are the set systems \(A^{(i)}_+, A^{(i)}_- \subseteq \powerset(X - i)\), thought as \(Q_{n - 1}\), given by
@@ -720,19 +720,19 @@ Certainly \(|C_i(A)| = |A|\). Moreover, \(C_i(A)\) ``looks more like'' the initi
 Say \(A\) is \emph{\(i\)-compresses} if \(C_i(A) = A\).
 
 \begin{theorem}[Harper]\index{Harper's theorem}
-  Let \(A \subseteq Q_n\) and \(C\) be the inital segment of simplicial order with \(|C| = |A|\). Then
+  Let \(A \subseteq Q_n\) and \(C\) be the initial segment of simplicial order with \(|C| = |A|\). Then
   \[
     |N(A)| \geq |N(C)|.
   \]
 \end{theorem}
 
-Same as in Krustal Katona, what we are really interested in is the ``nice'' size, i.e.\ if \(|A| \geq \sum_{i = 0}^r \binom{n}{i}\) then
+Same as in Kruskal-Katona, what we are really interested in is the ``nice'' size, i.e.\ if \(|A| \geq \sum_{i = 0}^r \binom{n}{i}\) then
 \[
   |N(A)| \geq \sum_{i = 0}^{r + 1} \binom{n}{i}.
 \]
 
 \begin{remark}\leavevmode
-  If \(A\) is a Hamming ball then done by Krustal Katona. Conversely, Harper implies Krustal-Katona. Indeed, given \(B \subseteq X^{(r)}\), apply Harper to \(A = B \cup X^{(\leq r - 1)}\).
+  If \(A\) is a Hamming ball then done by Kruskal-Katona. Conversely, Harper implies Kruskal-Katona. Indeed, given \(B \subseteq X^{(r)}\), apply Harper to \(A = B \cup X^{(\leq r - 1)}\).
 \end{remark}
 
 % Note to self: proofread until told to stop
@@ -778,7 +778,7 @@ Same as in Krustal Katona, what we are really interested in is the ``nice'' size
     whereas if \(n\) is even, say \(n = 2k\), we have
     \[
       B = X^{(\leq k - 1)} \cup \{x \in X^{(k)}: 1 \in x\} - \underbrace{\text{ last \(k\)-set with \(1\) }}_{1(k + 2)(k + 3) \dots (2k)} \cup \underbrace{\text{ first \(k\)-set without \(1\)}}_{234\dots k (k + 1)}
-    \] 
+    \]
   \end{lemma}
   Then done as in each case have \(|N(B)| \geq |N(C)|\).
 
@@ -798,7 +798,7 @@ Same as in Krustal Katona, what we are really interested in is the ``nice'' size
 \begin{remark}\leavevmode
   \begin{enumerate}
   \item It is also possible to prove Harper by \(UV\)-compression.
-  \item We can also use these ``codimension \(1\)'' compressions to prove Krustal Katona directly.
+  \item We can also use these ``codimension \(1\)'' compressions to prove Kruskal-Katona directly.
   \end{enumerate}
 \end{remark}
 
